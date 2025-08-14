@@ -1,0 +1,55 @@
+@import "tailwindcss";
+:root {
+  --checkbtn-gradient: linear-gradient(
+    90deg,
+    hsl(192, 100%, 67%),
+    hsl(280, 87%, 65%)
+  );
+
+  --background: hsl(0, 0%, 98%);
+  --bg-image-url: url("./assets/bg-desktop-light.jpg");
+  --todo-background: hsl(0, 0%, 98%);
+  --todo-border: hsl(233, 11%, 84%);
+  --text-color-primary: hsl(235, 21%, 11%);
+  --text-color-secondary: hsl(235, 19%, 35%);
+  --text-color-hover: hsl(235, 19%, 35%);
+}
+
+@theme {
+  --font-josefin: "Josefin Sans", sans-serif;
+  --color-primary-blue: hsl(220, 98%, 61%);
+
+  /* Light theme */
+  --color-gray-light-50: hsl(0, 0%, 98%);
+  --color-purple-light-300: hsl(234, 39%, 85%);
+  --color-gray-medium-300: hsl(234, 39%, 85%);
+  --color-gray-dark-600: hsl(236, 9%, 61%);
+  --color-navy-dark-850: hsl(235, 19%, 35%);
+
+  /* Dark theme */
+  --color-navy-dark-950: hsl(235, 21%, 11%);
+  --color-navy-dark-900: hsl(235, 24%, 19%);
+  --color-purple-dark-100: hsl(236, 33%, 92%);
+  --color-purple-dark-600: hsl(235, 16%, 43%);
+  --color-purple-dark-700: hsl(233, 14%, 35%);
+  --color-purple-dark-800: hsl(237, 14%, 26%);
+}
+.theme-dark {
+  --background: hsl(235, 21%, 11%);
+  --bg-image-url: url("./assets/bg-desktop-dark.jpg");
+  --todo-background: hsl(235, 24%, 19%);
+  --todo-border: hsl(235, 19%, 35%);
+  --text-color-primary: hsl(236, 9%, 61%);
+  --text-color-secondary: hsl(236, 9%, 61%);
+  --text-color-hover: hsl(0, 0%, 98%);
+}
+
+.todo-background {
+  background: var(--background) var(--bg-image-url) no-repeat center top;
+}
+
+@media screen and (max-width: 768px) {
+  .todo-background {
+    background-position: 30% -10%;
+  }
+}
